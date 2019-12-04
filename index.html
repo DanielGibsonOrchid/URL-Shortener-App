@@ -33,12 +33,12 @@
       </div>
       <ul class="desktop-menu-2 flex">
         <li><a href="#" class="link nav-item">Login</a></li>
-        <li><button type="button" class="btn-primary btn-sign-up-desktop">Sign Up</button></li>
+        <li><button type="button" class="btn-primary btn-sign-up-desktop" aria-label="Sign Up Button">Sign Up</button></li>
       </ul>
       
       <!-- Hamburger icon -->
       <div class="mobile-menu-div">
-        <button class="hamburger hamburger--elastic" id="mobile-menu-btn" type="button">
+        <button class="hamburger hamburger--elastic" id="mobile-menu-btn" type="button" aria-label="Mobile Menu Button">
           <span class="hamburger-box">
             <span class="hamburger-inner"></span>
           </span>
@@ -51,7 +51,7 @@
         <li><a href="#" class="mobile-nav-item">Pricing</a></li>
         <li><a href="#" class="mobile-nav-item">Resources</a></li>
         <li><a href="#" class="mobile-nav-item">Login</a></li>
-        <li><button class="btn-primary btn-sign-up-mobile" type="button">Sign Up</button></li>
+        <li><button class="btn-primary btn-sign-up-mobile" type="button" aria-label="Sign Up Button">Sign Up</button></li>
       </ul>
     </nav>
 
@@ -66,7 +66,7 @@
       <div class="header-text">
         <h1>More than just shorter links</h1>
         <p>Build your brand’s recognition and get detailed insights on how your links are performing.</p>
-        <button class="btn-primary get-started" type="button">Get Started</button>
+        <button class="btn-primary get-started" type="button" aria-label="Get Started Button">Get Started</button>
       </div>
     </section>
 
@@ -95,6 +95,7 @@
           <button 
             class="btn-primary shorten-it" 
             type="submit"
+            aria-label="Shorten Link Button"
           >
           Shorten It!</button>
         </form>
@@ -106,7 +107,7 @@
       <div class="loaderFlex"><div class="loader"></div></div>
       <!-- Button to clear local storage -->
       <div id="clear-btn-div" class="div-clear">
-        <button id="clear-btn" class="btn-primary shorten-it btn-clear" style="display:none">Clear List</button>
+        <button id="clear-btn" class="btn-primary shorten-it btn-clear" style="display:none" aria-label="Clear shorten URL's Button">Clear List</button>
       </div>
 
       <!-- Statistics text -->
@@ -154,7 +155,7 @@
   <div class="wrapper-boost">
     <section class="boost-section">
       <h2 class="white">Boost your links today</h2>
-      <button id="getStarted" class="btn-primary" type="button">Get Started</button>
+      <button id="getStarted" class="btn-primary" type="button" aria-label="Get Started Button">Get Started</button>
     </section>
   </div>
 
@@ -168,7 +169,7 @@
       <form name="sign-up" netlify id="signup" method="POST" class="modal-form">
         <input class="email-input" name="Email" type="email" placeholder="Enter your email..." aria-label="enter your email to get notified of updates required"
         >
-        <button class="btn-primary sign-up-btn" type="submit">Sign Up</button>
+        <button class="btn-primary sign-up-btn" type="submit" aria-label="Sign Up Button">Sign Up</button>
       </form>
     </div>
   </div>
@@ -201,10 +202,10 @@
 
       <!-- social icons -->
       <ul class="social-icons flex">
-        <li class="facebook-li"><a href="#" class="social-link"><span class="icon icon-facebook"></span></a></li>
-        <li><a href="#" class="social-link"><span class="icon icon-twitter"></span></a></li>
-        <li><a href="#" class="social-link"><span class="icon icon-pinterest"></span></a></li>
-        <li><a href="#" class="social-link"><span class="icon icon-instagram"></span></a></li>
+        <li class="facebook-li"><a href="#" aria-label="Facebook link" class="social-link"><span class="icon icon-facebook"></span></a></li>
+        <li><a href="#" aria-label="Twitter link" class="social-link"><span class="icon icon-twitter"></span></a></li>
+        <li><a href="#" aria-label="Pinterest link" class="social-link"><span class="icon icon-pinterest"></span></a></li>
+        <li><a href="#" aria-label="Instagram link" class="social-link"><span class="icon icon-instagram"></span></a></li>
       </ul>
     </div>
     <div class="attribution">
@@ -213,6 +214,6 @@
     </div>
   </footer>
 
-  <script type="text/javascript" src="scripts.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
