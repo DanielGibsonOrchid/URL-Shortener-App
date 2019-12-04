@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="./images/favicon/site.webmanifest">
+
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap" rel="stylesheet"> 
+  <title>Shortly | URL shortening app</title>
+</head>
+
+<body>
+  <div class="wrapper-body">
+    <nav class="nav flex">
+      
+      <div class="nav-wrapper flex">
+        <!-- Logo -->
+        <div class="logo flex">
+          <img src="./images/logo.svg" alt="Shortly Logo">
+        </div>
+
+        <!-- Desktop Menu -->
+        <ul class="desktop-menu-1 flex">
+          <li><a href="#" class="link nav-item">Features</a></li>
+          <li><a href="#" class="link nav-item">Pricing</a></li>
+          <li><a href="#" class="link nav-item">Resources</a></li>
+        </ul>
+      </div>
+      <ul class="desktop-menu-2 flex">
+        <li><a href="#" class="link nav-item">Login</a></li>
+        <li><button type="button" class="btn-primary btn-sign-up-desktop">Sign Up</button></li>
+      </ul>
+      
+      <!-- Hamburger icon -->
+      <div class="mobile-menu-div">
+        <button class="hamburger hamburger--elastic" id="mobile-menu-btn" type="button">
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button> 
+      </div>
+
+      <!-- Mobile Menu -->
+      <ul class="mobile-nav hidden flex" id="mobile-menu-links">
+        <li><a href="#" class="mobile-nav-item">Features</a></li>
+        <li><a href="#" class="mobile-nav-item">Pricing</a></li>
+        <li><a href="#" class="mobile-nav-item">Resources</a></li>
+        <li><a href="#" class="mobile-nav-item">Login</a></li>
+        <li><button class="btn-primary btn-sign-up-mobile" type="button">Sign Up</button></li>
+      </ul>
+    </nav>
+
+    <!-- header and call to action -->
+    <section class="header-section flex">
+      
+      <!-- Header image -->
+      <div class="header-image">
+        <img src="./images/illustration-working.svg" alt="illustration person working at a desk">
+      </div>
+
+      <div class="header-text">
+        <h1>More than just shorter links</h1>
+        <p>Build your brand’s recognition and get detailed insights on how your links are performing.</p>
+        <button class="btn-primary get-started" type="button">Get Started</button>
+      </div>
+    </section>
+
+    <div class="wrapper">
+      <!-- Shorten URL form -->
+      <section class="shorten-section">
+        <form 
+          id="url-form" 
+          class="shorten-form flex" 
+          autocomplete="off"
+          method="POST"
+          action="scripts.js"
+        >
+          <input 
+            id="url-input" 
+            type="text" 
+            name="shorten" 
+            class="input-primary" 
+            placeholder="Shorten a link here..." 
+            aria-label="Shorten your URL here"
+            aria-describedby="email-help-text"
+          >
+          <span id="email-help-text" class="validation hidden" role="alert">
+            Please add a link
+          </span>
+          <button 
+            class="btn-primary shorten-it" 
+            type="submit"
+          >
+          Shorten It!</button>
+        </form>
+      </section>
+
+      <!-- Dynamically add tile from JS -->
+      <div id="short-url-tile-wrapper"></div>
+      <!-- Loading animation -->
+      <div class="loaderFlex"><div class="loader"></div></div>
+      <!-- Button to clear local storage -->
+      <div id="clear-btn-div" class="div-clear">
+        <button id="clear-btn" class="btn-primary shorten-it btn-clear" style="display:none">Clear List</button>
+      </div>
+
+      <!-- Statistics text -->
+      <section class="stats-section">
+        <h2>Advanced Statistics</h2>
+        <p>Track how your links are performing across the web with our advanced statistics dashboard.</p>
+      </section>
+
+      <!-- three tiles -->
+      <section class="tiles-section flex">
+
+        <!-- first tile -->
+        <div class="tiles-div first-tile">
+          <div class="tile-img">
+            <img src="./images/icon-brand-recognition.svg" alt="Brand Recognition small graph">
+          </div>
+          <h3>Brand Recognition</h3>
+          <p>Boost your brand recognition with each click. Generic links don’t mean a thing. Branded links help instil confidence in your content.</p>
+        </div>
+
+        <!-- second tile -->
+        <div class="tiles-div second-tile">
+          <div class="vertical-line"></div>
+          <div class="tile-img">
+            <img src="./images/icon-detailed-records.svg" alt="Detailed Records small timer">
+          </div>
+          <h3>Detailed Records</h3>
+          <p>Gain insights into who is clicking your links. Knowing when and where people engage with your content helps inform better decisions.</p>
+        </div>
+
+        <!-- third tile -->
+        <div class="tiles-div third-tile">
+            <div class="vertical-line"></div>
+            <div class="tile-img">
+              <img src="./images/icon-fully-customizable.svg" alt="Fully Customizable small pens">
+            </div>
+            <h3>Fully Customizable</h3>
+            <p>Improve brand awareness and content discoverability through customizable links, supercharging audience engagement.</p>
+          </div>
+      </section>
+    </div>
+  </div>
+
+  <!-- call to action -->
+  <div class="wrapper-boost">
+    <section class="boost-section">
+      <h2 class="white">Boost your links today</h2>
+      <button id="getStarted" class="btn-primary" type="button">Get Started</button>
+    </section>
+  </div>
+
+  <!-- Modal Coming Soon box -->
+  <div id="modal" class="modal-wrapper">
+    <div class="modal-coming-soon">
+      <div class="close-modal"><img src="./images/x.svg" alt="Close modal box"></div>
+      <img src="./images/undraw_report.svg" alt="illustration of man standing next to tablet with graphs">
+      <h2>Coming Soon...</h2>
+      <p>Sign up to be notified when this becomes available!</p>
+      <form name="sign-up" netlify id="signup" method="POST" class="modal-form">
+        <input class="email-input" type="email" placeholder="Enter your email..." aria-label="enter your email to get notified of updates required"
+        >
+        <button class="btn-primary sign-up-btn" type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- footer Links -->
+  <footer class="footer-section">
+    <div class="footer-wrapper">
+      <div class="footer-logo">
+        <img src="./images/logo-white.svg" alt="Shortly Logo">
+      </div>
+      <ul>
+        <li class="white">Features</li>
+        <li><a href="#" class="link">Link Shortening</a></li>
+        <li><a href="#" class="link">Branded Links</a></li>
+        <li><a href="#" class="link">Analytics</a></li>
+      </ul>
+      <ul>
+        <li class="white">Resources</li>
+        <li><a href="#" class="link">Blog</a></li>
+        <li><a href="#" class="link">Developers</a></li>
+        <li><a href="#" class="link">Support</a></li>
+      </ul>
+      <ul>
+        <li class="white">Company</li>
+        <li><a href="#" class="link">About</a></li>
+        <li><a href="#" class="link">Our Team</a></li>
+        <li><a href="#" class="link">Careers</a></li>
+        <li><a href="#" class="link">Contact</a></li>
+      </ul>
+
+      <!-- social icons -->
+      <ul class="social-icons flex">
+        <li class="facebook-li"><a href="#" class="social-link"><span class="icon icon-facebook"></span></a></li>
+        <li><a href="#" class="social-link"><span class="icon icon-twitter"></span></a></li>
+        <li><a href="#" class="social-link"><span class="icon icon-pinterest"></span></a></li>
+        <li><a href="#" class="social-link"><span class="icon icon-instagram"></span></a></li>
+      </ul>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/danielgibsonjs" target="_blank">Daniel Gibson</a>.
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="scripts.js"></script>
+</body>
+</html>
